@@ -1,0 +1,494 @@
+*{margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none; color: #000;}
+
+body{font-size: 15px; line-height: 30px; 
+    font-family: 'KoddiUDOnGothic-Regular';
+    /* position: relative; */
+
+}
+
+/* .top {width: 50px; height: 50px;} */
+/* 
+.top_btn {display: inline-block; background-color: black; position: fixed; bottom: 50px; right: 50px; color: #fff; padding: 16px; border-radius: 50%; z-index: 2;} */
+
+
+
+
+.top {position:fixed; bottom:50px; right:50px; display:none; background-color: black;color: #fff; padding: 16px; border-radius: 50%;}
+
+@font-face {
+    font-family: 'KoddiUDOnGothic-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/KoddiUDOnGothic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*조선일보명조*/
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&family=Noto+Serif+KR:wght@200;400&display=swap');
+
+
+
+.top {position:fixed; bottom:50px; right:50px; display:none; background-color: black;color: #fff; padding: 16px; border-radius: 50%; z-index: 2;}
+
+
+#main {width: 100%; height:938px; 
+	background: url(../images/main_bg.jpg) no-repeat center top;
+    
+
+    background-size: cover;
+}
+
+
+.header { width: 1320px; margin: 0 auto; padding-top: 14px; height: 40px;}
+
+
+.nav {float: right;}
+.nav li {float: left;}
+
+.main_nav {
+	
+    margin: 0;
+    padding: 0;
+    counter-increment: itemcounter;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.main_nav::before {
+   
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.menu {
+    cursor: pointer;
+    font-size: 17px;
+    position: relative;
+    white-space: nowrap;
+    
+}
+
+.menu::before,
+.menu::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+
+.menu::before {
+    content: '';
+    /* show by default */
+}
+
+.menu--list {
+    font-family: 'Chosunilbo_myungjo' ; font-weight: bold; font-size: 17px;
+	margin: 0 15px ;
+}
+
+.menu--list::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+.menu--list:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+}
+
+
+
+/* .sec1 {width: 100%; text-align: center;  height: 700px;} */
+
+.s1 {
+    width: 100%;
+    text-align: center;
+    height: 900px;
+    overflow: hidden;
+} 
+
+.s1_title {
+    font-size: 22px;
+    font-family: 'Chosunilbo_myungjo'; 
+    font-weight: bold;
+    margin-top: 80px;
+    padding-bottom: 70px;
+}
+
+
+
+
+
+
+.new_text {font-size: 11px; padding-bottom: 60px; text-align: left;}
+.bold {font-weight: 700; margin: 20px 0 -15px 0; }
+.line {font-size: 10px; text-decoration: line-through; color: rgb(124, 124, 124); margin-bottom: -15px;}
+.orange {color: #ff4817; float: left; font-size: 10px; margin-bottom: -15px;}
+.price {float: left; font-weight: 700; font-size: 12px;}
+.box {font-size: 10px; clear: both; font-size: 10px; background-color: #ccc; margin-top: -20px; padding: 2px;}
+.line_box {border: solid 1px #ccc;  font-size: 10px;}
+
+
+
+
+.s2 {
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+    text-align: center;
+}
+.s2_inner {
+    /* width:1820px;  */
+    margin: 0 auto;}
+
+.s2_title {
+    font-size: 22px;
+    font-family: 'Chosunilbo_myungjo'; 
+    font-weight: bold;
+  
+    margin: 100px 0 80px 0;
+}
+
+
+.exclusive{width:100%;}
+
+.exclusive li 
+{float:left; 
+    /* width:422px; 추가 */
+    width:23.5%;
+    /* height:565px; */
+    margin-right:2%;
+   
+    position:relative; 
+    overflow: hidden;
+    /*ul li밖 요소 보이지 않게 함*/
+    text-align: center;
+}
+
+.exclusive li:nth-child(4){margin-right:0;}
+
+.exclusive li img{display:block;
+            width:100%;/*추가*/
+}
+
+
+
+.brand_name {font-weight: bold; font-size: 18px;}
+.box1_1 {background: #ccc; color: #161616; padding: 1px; margin-top: 20px;}
+.line_box1 {border: #fff 1px solid; padding: 1px;}
+.line1 {text-decoration: line-through;}
+.orange1 {color: #ff4817;}
+.price1 {font-size: 20px;}
+
+
+.bottom{
+    /* width:422px; height:565px; */
+    width:100%; 
+    height:100%;
+    position:absolute;/*자식*/
+    /* top:572.61px; */
+    top:600px;
+     left:0;
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    color:#fff;
+    /* padding:200px 10px;*/
+    padding-top:30%; 
+    box-sizing: border-box;
+   
+    transition:all 1.5s;/*변화의 시간을 줌*/
+}
+
+
+.exclusive li a:hover .bottom
+{transform:translateY(-600px);}
+/*아래에 붙어있던 caption박스를 위로 옮김*/
+
+
+
+.banner {width: 100%; }
+
+/*추가*/
+
+.banner img{width:100%;display:block; }
+
+
+/* 수정한 부분 */
+
+
+.section3 {background-color: #fff8d1; height:3650px;}
+
+
+/*box1*/
+
+.box1 {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 50px;
+   
+}
+
+.box1_inner {
+    width: 1320px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.warm_title {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5%;
+}
+.tone_con {
+    margin-bottom: 150px;
+    font-size:18px; font-weight: 400;
+}
+
+
+.number1 {position: absolute; top: 0; right: 10%;}
+.number1 li {float: left;}
+.number_text {
+    font-family:'KoddiUDOnGothic-Regular';
+    font-size: 18px;
+    font-weight: bold;
+}
+.number1 li:nth-child(1) {padding-right: 20px;}
+
+.springwarm_big {float: left;}
+.springwarm_text {text-align: center;}
+
+
+.springwarm {
+    float: right;
+    position:absolute;
+    bottom: 0; right: 0;}
+
+.springwarm li {float: left;}
+.springwarm li a {
+    display: block;
+    padding-left: 20px;}
+
+
+.border {
+    border-left: #161616 solid 3px;
+    padding:0 30px 0 10px;
+    font-weight: bold;}
+    
+.tone_text {text-align: center;}
+
+
+
+/*box2*/
+
+.box2 {
+    width: 100%;
+    overflow: hidden;
+}
+
+.box2_inner {
+     width: 1320px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.number2 {position: absolute; top: 0; left: 10%;}
+.number2 li {float: left;}
+.number2 li:nth-child(1) {padding-right: 20px;}
+
+.autumnwarm {
+    float: left;
+    position:absolute;
+    bottom: 0; left: 0;
+}
+
+.autumnwarm li {float: left;}
+.autumnwarm li a {
+    display: block;
+    padding-left: 20px;}
+
+.autumnwarm_big {float: right;}
+
+.cool_title {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5%;
+}
+
+
+
+/*box3*/
+.box3 {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 50px;
+   
+}
+
+.box3_inner {
+    width: 1320px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.number3 {position: absolute; top: 0; right: 10%;}
+.number3 li {float: left;}
+.number3 li:nth-child(1) {padding-right: 20px;}
+
+
+.summercool_big {float: left;}
+.summercool_text {text-align: center;}
+.summercool {
+    float: right;
+    position:absolute;
+    bottom: 0; right: 0;}
+
+.summercool li {float: left;}
+.summercool li a {
+    display: block;
+    padding-left: 20px;}
+
+
+.box4 {
+        width: 100%;
+        overflow: hidden;
+        
+       
+    }
+    
+.box4_inner {
+        width: 1320px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden; }
+
+
+.number4 {position: absolute; top: 0; left: 10%;}
+.number4 li {float: left;}
+.number4 li:nth-child(1) {padding-right: 20px;}
+
+.coolwinter {
+    float: left;
+    position:absolute;
+    bottom: 0; left: 0;
+}
+
+.coolwinter li {float: left;}
+.coolwinter li a {
+    display: block;
+    padding-left: 20px;}
+
+
+    .coolwinter_big {float: right;}
+
+
+    .footer {width: 100%; height: 401px; 
+        background: url(../images/footer_bg2.jpg) no-repeat center top;
+        box-sizing: border-box; margin-top: 0px;}
+    
+    
+    .footer_inner {width:819.58px; margin: 0 auto; padding: 10% 0%;}
+    
+        .left {text-align: right; float: left;}
+        .left li a {display: block; color: #000; font-size: 11px; padding-right: 30px;}
+        .center {float: left;}
+    
+        /* .center li {padding: 0 50px;} */
+        
+        .center li a {display: block; color: #000; font-size: 11px; }
+        .right {text-align: left; float: left;}
+    
+        .center li:nth-child(2) {display: inline-block; float: left; margin-left: 120px; }
+        .center li:nth-child(3) {float: left; padding-left: 20px; }
+        .center li:nth-child(4) {clear: both; margin-left: 25px;}
+    
+        
+    
+        .center li:nth-child(2):hover {opacity: 0.5;}
+        .center li:nth-child(3):hover {opacity: 0.5;}
+    
+    
+        .right li a {display: block; color: #000; font-size: 11px; padding-left: 30px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.footer {width: 100%; height: 401px; 
+	background: url(../images/footer_bg.png) no-repeat center top;
+    box-sizing: border-box;}
+
+	.footer_inner {width: 1320px; margin: 0 auto; padding: 10% 0 30% 0;}
+
+	.left {text-align: right; float: left;}
+	.left li a { display: block; color: #000; font-size: 11px; padding-right: 30px;}
+	.center { float: left;}
+
+
+	
+	.center li a {display: block; color: #000; font-size: 11px; }
+	.right {text-align: left; float: left;}
+
+	.center li:nth-child(2) {display: inline-block;  margin-left: 120px; }
+	.center li:nth-child(3) {float: left; padding-left: 20px; }
+	.center li:nth-child(4) {clear: both; margin-left: 25px;}
+
+	
+
+	.center li:nth-child(2):hover {opacity: 0.5;}
+	.center li:nth-child(3):hover {opacity: 0.5;}
+
+
+	.right li a {display: block; color: #000; font-size: 11px; padding-left: 30px;} */
+
+
+
+    
